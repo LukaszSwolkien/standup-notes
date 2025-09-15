@@ -25,9 +25,15 @@ This tool whips up a draft for standup notes by pulling in data from the Jira pr
 uv run ./main.py your_team.yaml
 ```
 
+## Features
+
+- **Recent Issues**: Fetches issues that are active or recently updated
+- **Engineer Mapping**: Maps JIRA assignee identifiers to friendly display names  
+- **Recent Comments**: Shows the latest comment on each issue if added recently:
+  - If today is Monday: shows comments from Friday onwards
+  - Other days: shows comments from yesterday onwards
+- **Customizable Time Window**: Configure how many days back to look for issue updates
+
 ## Configuration
 
-See `example.yaml` for a complete configuration template. The configuration supports:
-
-- **Engineer mapping**: Map JIRA assignee identifiers to friendly display names
-- **Customizable time window**: Configure how many days back to look for updates
+See `example.yaml` for a complete configuration template.
