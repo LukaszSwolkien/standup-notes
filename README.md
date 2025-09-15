@@ -32,6 +32,11 @@ uv run ./main.py your_team.yaml
 - **Recent Comments**: Shows the latest comment on each issue if added recently:
   - If today is Monday: shows comments from Friday onwards
   - Other days: shows comments from yesterday onwards
+  - GitLab merge request comments are formatted as "MR: <project> (branch: <branch>)"
+- **Cross-Team Dependencies**: Tracks dependencies to other teams and shows recent changes:
+  - Automatically detects issue links to other projects
+  - Shows what changed (status, assignee, comments, etc.) since yesterday (or Friday if Monday)
+  - Only displays dependencies with recent activity to reduce noise
 - **Customizable Time Window**: Configure how many days back to look for issue updates
 
 ## Configuration

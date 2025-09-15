@@ -25,3 +25,10 @@ engineers:
 # 3. Project key is usually visible in your JIRA issues (e.g., PROJ-123)
 # 4. Engineer assignee names should match exactly how they appear in JIRA
 # 5. Display names can be anything you want to show in the output
+#
+# Features:
+# - Shows recent issues (active, in progress, in review, or recently updated)
+# - Displays latest comments added since yesterday (or Friday if today is Monday)
+# - Formats GitLab merge request comments as clean "MR: <project> (branch: <branch>)" links
+# - Tracks dependencies to other teams and shows recent changes
+# - Maps engineer assignees to friendly display names
