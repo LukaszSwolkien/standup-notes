@@ -8,6 +8,7 @@ api_token: "YOUR_JIRA_API_TOKEN_HERE"
 project_key: "PROJ"  # Your JIRA project key
 board_id: 1234       # Your JIRA board ID number
 recent_days: 1       # Number of days to look back for recently updated issues
+gitlab_token: "YOUR_GITLAB_API_TOKEN_HERE"  # Optional: GitLab API token for MR statistics
 
 engineers:
   - assignee: "John Doe"                    # JIRA assignee name (as it appears in JIRA)
@@ -20,15 +21,17 @@ engineers:
     display_name: "Alice Johnson"
 
 # Instructions:
-# 1. Get your API token from: https://id.atlassian.com/manage-profile/security/api-tokens
-# 2. Find your board ID by going to your board and checking the URL
-# 3. Project key is usually visible in your JIRA issues (e.g., PROJ-123)
-# 4. Engineer assignee names should match exactly how they appear in JIRA
-# 5. Display names can be anything you want to show in the output
+# 1. Get your JIRA API token from: https://id.atlassian.com/manage-profile/security/api-tokens
+# 2. Get your GitLab API token from: https://cd.splunkdev.com/-/profile/personal_access_tokens
+# 3. Find your board ID by going to your board and checking the URL
+# 4. Project key is usually visible in your JIRA issues (e.g., PROJ-123)
+# 5. Engineer assignee names should match exactly how they appear in JIRA
+# 6. Display names can be anything you want to show in the output
 #
 # Features:
 # - Shows recent issues (active, in progress, in review, or recently updated)
 # - Displays latest comments added since yesterday (or Friday if today is Monday)
-# - Formats GitLab merge request comments as clean "MR: <project> (branch: <branch>)" links
+# - Formats GitLab merge request comments with statistics: "MR: <project> (branch: <branch>) (<state>, <files> files, +<additions>/-<deletions>) - <full_url>"
+# - GitLab statistics require a GitLab API token (get from GitLab profile settings)
 # - Tracks dependencies to other teams and shows recent changes
 # - Maps engineer assignees to friendly display names
