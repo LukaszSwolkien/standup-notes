@@ -1,0 +1,27 @@
+# Example configuration file for JIRA standup notes generator
+# Copy this file and rename it to your team name (e.g., my_team.yaml)
+# Fill in your actual JIRA credentials and team details
+
+jira_base_url: "https://your-domain.atlassian.net"
+email: "your-email@company.com"
+api_token: "YOUR_JIRA_API_TOKEN_HERE"
+project_key: "PROJ"  # Your JIRA project key
+board_id: 1234       # Your JIRA board ID number
+recent_days: 1       # Number of days to look back for recently updated issues
+
+engineers:
+  - assignee: "John Doe"                    # JIRA assignee name (as it appears in JIRA)
+    display_name: "John Doe"               # How you want the name to appear in output
+  - assignee: "jane.smith@company.com"     # Can be email if that's how JIRA identifies users
+    display_name: "Jane Smith"             # Friendly display name
+  - assignee: "Bob Wilson"
+    display_name: "Bob Wilson"
+  - assignee: "alice@company.com"
+    display_name: "Alice Johnson"
+
+# Instructions:
+# 1. Get your API token from: https://id.atlassian.com/manage-profile/security/api-tokens
+# 2. Find your board ID by going to your board and checking the URL
+# 3. Project key is usually visible in your JIRA issues (e.g., PROJ-123)
+# 4. Engineer assignee names should match exactly how they appear in JIRA
+# 5. Display names can be anything you want to show in the output

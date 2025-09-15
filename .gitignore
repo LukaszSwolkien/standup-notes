@@ -205,3 +205,9 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Team configuration files
+# These contain sensitive information like API tokens and team member details
+*_team.yaml
+ck_team.yaml
+wizards_team.yaml
